@@ -38,9 +38,11 @@
 
 3. Create a new .env file based on .env.example: cp .env.example .env
 
-4. Set your database environment variables in the .env file.
+4. Install dependencies by running this command: composer install
 
-5. (Optional) If you want to activate the “forgot password” feature do step 5 & 6, configure your mail settings in the .env file as follows:
+5. Set your database environment variables in the .env file.
+
+6. (Optional) If you want to activate the “forgot password” feature do step 5 & 6, configure your mail settings in the .env file as follows:
 - MAIL_MAILER=smtp
 - MAIL_HOST=smtp.gmail.com
 - MAIL_PORT=587
