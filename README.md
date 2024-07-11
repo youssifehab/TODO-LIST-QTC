@@ -21,6 +21,12 @@
   </a>
 </p>
 
+## Features
+
+- **Authentication**: User registration and login functionality.
+- **Todo List CRUD Operations**: Create, read, update, and delete todo items.
+- **Sorting and Filtering**: Sort and filter todo items for better organization.
+
 ## Configuration
 
 1. Clone this repository:
