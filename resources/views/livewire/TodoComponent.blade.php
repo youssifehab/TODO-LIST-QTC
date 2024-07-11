@@ -1,10 +1,46 @@
 <div>
-    <div class="flex items-center justify-center">
+    {{-- create-task-button --}}
+    <div class="flex">
         <x-primary-button route="todos.create">
             {{ __('Create New Task') }}
         </x-primary-button>
     </div>
     <br>
+    <hr>
+    <br>
+    {{-- sorting & filteration --}}
+    <div class="flex items-center justify-between">
+        <x-secondary-button wire:click="sortByTitle">
+            {{ __('sort by title') }}
+            </x-primary-button>
+            <x-secondary-button wire:click="sortByTimeAsc">
+                {{ __('sort by time ascending') }}
+                </x-primary-button>
+                <x-secondary-button wire:click="sortByTimeDesc">
+                    {{ __('sort by time descending') }}
+                    </x-primary-button>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    {{-- filteration --}}
+
+    <div class="flex items-center justify-between">
+        <x-secondary-button wire:click="filterByStatus('all')">
+            {{ __('All') }}
+        </x-secondary-button>
+        <x-secondary-button wire:click="filterByStatus(1)">
+            {{ __('Status Completed') }}
+        </x-secondary-button>
+        <x-secondary-button wire:click="filterByStatus(0)">
+            {{ __('Status Pending') }}
+        </x-secondary-button>
+    </div>
+
+    <br>
+
+    {{-- Table & handling Errors --}}
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         @if ($errors->any())
             <div class="text-red-600">

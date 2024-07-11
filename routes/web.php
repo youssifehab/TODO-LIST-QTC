@@ -15,8 +15,9 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-// Todos Routes
 
+
+// Todos Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('todos/create', [TodoController::class, 'create'])
         ->name('todos.create');
