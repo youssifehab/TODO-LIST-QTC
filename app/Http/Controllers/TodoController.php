@@ -63,15 +63,22 @@ class TodoController extends Controller
             $status = 0;
         }
 
-        $singleTodo = Todo::find($todoId);
+        if (Auth::check()) {
+            $singleTodo = Todo::where('id', $todoId)
+                ->where('user_id', auth()->user()->id)
+                ->first();
 
-        $singleTodo->update([
-            'title' => $title,
-            'description' => $description,
-            'status' => $status,
-        ]);
+            $singleTodo->update([
+                'title' => $title,
+                'description' => $description,
+                'status' => $status,
+            ]);
 
-        return to_route('dashboard');
+
+            return to_route('dashboard');
+        } else {
+            return redirect()->route('dashboard')->withe('error', 'Authentication required.');
+        }
     }
 
     function destroy($todoId)
