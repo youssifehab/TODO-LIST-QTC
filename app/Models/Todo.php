@@ -11,6 +11,8 @@ class Todo extends Model
 
     protected $guarded = [];
 
+    protected $fillable = ['title', 'description', 'user_id', 'status'];
+
     // Relation with user table [many to one]
     public function user()
     {
