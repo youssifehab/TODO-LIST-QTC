@@ -23,7 +23,7 @@
 
 ## Features
 
-- **Authentication**: User registration and login functionality.
+- **Authentication**: User registration, login, password and edit user profile data functionality.
 - **Todo List CRUD Operations**: Create, read, update, and delete todo items.
 - **Sorting and Filtering**: Sort and filter todo items for better organization.
 
