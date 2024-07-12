@@ -52,7 +52,7 @@
     - DB_USERNAME=root
     - DB_PASSWORD=enter-your-password
 
-8. (Optional) If you want to activate the “forgot password” feature do step 5 & 6, configure your mail settings in the .env file as follows:
+8. (Optional) If you want to activate the “forgot password” feature do step 8 & 9, configure your mail settings in the .env file as follows:
     - MAIL_MAILER=smtp
     - MAIL_HOST=smtp.gmail.com
     - MAIL_PORT=587
