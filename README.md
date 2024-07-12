@@ -38,9 +38,13 @@
 
 3. Create a new .env file based on .env.example: cp .env.example .env
 
-4. Install dependencies by running this command: composer install
+4. To generate APP_KEY run this command: php artisan key:generate
 
-5. Set your database environment variables in the .env file like this:
+5. Install dependencies by running this command: composer install
+
+6. Install npm dependencies by runnint this command: npm install
+
+7. Set your database environment variables in the .env file like this:
     - DB_CONNECTION=mysql
     - DB_HOST=127.0.0.1
     - DB_PORT=3306
@@ -48,7 +52,7 @@
     - DB_USERNAME=root
     - DB_PASSWORD=enter-your-password
 
-7. (Optional) If you want to activate the “forgot password” feature do step 5 & 6, configure your mail settings in the .env file as follows:
+8. (Optional) If you want to activate the “forgot password” feature do step 5 & 6, configure your mail settings in the .env file as follows:
     - MAIL_MAILER=smtp
     - MAIL_HOST=smtp.gmail.com
     - MAIL_PORT=587
@@ -58,8 +62,12 @@
     - MAIL_FROM_ADDRESS="your_email@gmail.com"
     - MAIL_FROM_NAME="${APP_NAME}"
 
-6. (Optional) Run the following command to cache the configuration: php artisan config:cache
+9. (Optional) Run the following command to cache the configuration: php artisan config:cache
 
-7. Run the migration to set up your database: php artisan migrate
+10. Run the migration to set up your database: php artisan migrate
+
+11. To run the app:
+    - php artisan serve
+    - npm run dev
 
 
